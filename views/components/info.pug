@@ -1,0 +1,29 @@
+mixin content(val)
+  section.layout-col-6
+    h5.color-red-light.layout-title= val.title
+    span.layout-content-txt= val.description
+    
+mixin image(val)
+  section.layout-col-6
+    img.layout-img.layout-margin-vert(src=val.src alt=val.alt)
+  
+section.layout-contain.layout-margin-vert-bottom-small
+  section.layout-padding-vert-small
+    small
+      a.color-grey(href='/') Home
+      |  / 
+      a.page-link(href=`/${title}`)= title
+  section.layout-hero
+    img.layout-hero-img(src=hero.src alt=hero.alt)
+    span.layout-hero-img-txt= title
+    
+each val, i in info
+  section.layout-content.layout-padding-vert(class=`${typeof val.background === 'string' ? 'layout-' + val.background : ''}`)
+    section.layout-contain
+      section.layout-row
+        if i % 2 == 1
+          +image(val.img)
+          +content(val)
+        else 
+          +content(val)
+          +image(val.img)
