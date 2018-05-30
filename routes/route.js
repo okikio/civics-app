@@ -1,4 +1,5 @@
 var page = require("../util/page");
+const cool = require('cool-ascii-faces');
 
 module.exports = {
     // List of routers
@@ -81,6 +82,7 @@ module.exports = {
             },  
             
         }),
+        "cool": function (req, res) { res.send(cool()); },
         "index": page({ 
             "title": "Renewable Energy", 
             "footbar": false, 
@@ -144,6 +146,7 @@ module.exports = {
         "/actions": "pages/actions",
         "/solutions": "pages/solutions",
         "/sources": "pages/sources",
+        "/cool": "cool",
         '/': "index",
     }
 };
