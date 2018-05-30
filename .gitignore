@@ -5,6 +5,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Heroku Test
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+
 # Runtime data
 pids
 *.pid
