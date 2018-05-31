@@ -1,10 +1,9 @@
 var page = require("../util/page");
-const cool = require('cool-ascii-faces');
 
 module.exports = {
     // List of routers
     "routers": {
-        "pages/questions": page({
+        "pages/questions": [page({
             "title": "Questions",
             "hero": {
                 "src": "/assets/images/city.jpeg",
@@ -51,38 +50,37 @@ module.exports = {
                     "background": "dark2"
                 },
             ],
-        }),
-        "pages/history": page({ 
+        }), "template/page"],
+        "pages/history": [page({ 
             "title": "History", 
             "hero": {
                 "src": "/assets/images/city2.jpeg",
                 "alt": "An iamge of a bustling city."
             },
-        }),
-        "pages/actions": page({ 
+        }), "template/page"],
+        "pages/actions": [page({ 
             "title": "Actions", 
             "hero": {
                 "src": "/assets/images/city3.jpg",
                 "alt": "An iamge of a bustling city."
             }, 
-        }),
-        "pages/solutions": page({ 
+        }), "template/page"],
+        "pages/solutions": [page({ 
             "title": "Solutions", 
             "hero": {
                 "src": "/assets/images/city4.jpg",
                 "alt": "An iamge of a bustling city."
             },  
             
-        }),
-        "pages/sources": page({ 
+        }), "template/page"],
+        "pages/sources": [page({ 
             "title": "Sources", 
             "hero": {
                 "src": "/assets/images/city5.jpg",
                 "alt": "An iamge of a bustling city."
             },  
             
-        }),
-        "cool": function (req, res) { res.send(cool()); },
+        }), "template/page"],
         "index": page({ 
             "title": "Renewable Energy", 
             "footbar": false, 
@@ -136,7 +134,7 @@ module.exports = {
                     "content": "Renewable Energy ..."
                 },
             ]
-        })
+        }),
     },
 
     // List of routes
@@ -146,7 +144,6 @@ module.exports = {
         "/actions": "pages/actions",
         "/solutions": "pages/solutions",
         "/sources": "pages/sources",
-        "/cool": "cool",
         '/': "index",
     }
 };

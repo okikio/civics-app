@@ -8,7 +8,7 @@ var FootTop = $(".footer-top");
 var NavList = $(".navbar-list");
 var Content = $(".fadeOut");
 
-var _Animate, Anim, Avail, _Screen = {};
+var _Animate, Anim, Avail, _Screen = {}, Scroll;
 var Ease = function Ease(start, stop, vel) {
     return start + (stop - start) / vel;
 };
@@ -33,13 +33,12 @@ FootTop.on("click", function() {
     });
 });
 
-window.onload = function(e) {
-    Content.addClass("fadeIn");
-    Content.removeClass("fadeOut");
-    window.onscroll = function() {
-        _Screen = SetScreen();
-        Avail = _Screen.height - _Screen.fullHeight;
-        Navbar.toggleClass("style-shadow1", window.scrollY > 50);
-        FootTop.toggleClass("footer-top-focus", window.scrollY > (Avail / 2));
-    };
+Scroll = function() {
+    _Screen = SetScreen();
+    Avail = _Screen.height - _Screen.fullHeight;
+    Navbar.toggleClass("style-shadow1", window.scrollY > 50);
+    FootTop.toggleClass("footer-top-focus", window.scrollY > (Avail / 2));
 };
+
+Scroll();
+window.onscroll = Scroll;
