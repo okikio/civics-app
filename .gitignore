@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Git Pushing
+push-git.txt
+
 # Heroku Test
 /node_modules
 npm-debug.log
