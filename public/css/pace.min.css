@@ -17,7 +17,7 @@
 .fadeIn {
 	-webkit-transform: scale(1);
 	min-height: initial !important;
-	height: 100% !important;
+	height: initial !important;
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
