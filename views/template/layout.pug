@@ -22,14 +22,14 @@ html(lang="en")
 
     each style in css
       link(rel='stylesheet' href=style)
-      
-    script(src='./js/pace.min.js')
-    script(src='./js/rye.min.js')
-    script(src='./js/main.js')
-    each scripts in js
-      script(src=scripts)
   body
     include ../components/header.pug
     main.main
       block content
     include ../components/footer.pug
+      
+  script(src='./js/pace.min.js')
+  script(src='./js/rye.min.js')
+  script(src='./js/main.js')
+  each scripts in js
+    script(src=scripts)
