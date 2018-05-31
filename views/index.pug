@@ -12,7 +12,7 @@ block content
   each tile in pagelist
     section.layout-content.layout-padding-vert(class=`${typeof tile.background === 'string' ? 'layout-' + tile.background : ''}`)
       section.layout-contain
-        section.tile.tile-small.tile-move
+        section.tile.tile-small
           section.tile-image
             img.tile-img(src=tile.hero.src alt=tile.hero.alt)
           footer.tile-footer
