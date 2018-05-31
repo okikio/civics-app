@@ -35,9 +35,7 @@ FootTop.on("click", function() {
 
 window.onload = function(e) {
     Content.addClass("fadeIn");
-    setTimeout(function () {
-        Content.removeClass("fadeOut");
-    }, 4000);
+    Content.removeClass("fadeOut");
     window.onscroll = function() {
         _Screen = SetScreen();
         Avail = _Screen.height - _Screen.fullHeight;
