@@ -8,7 +8,7 @@ module.exports = function(specific) {
             "alt": "An iamge of a bustling city."
         },
         "info": [], "css": [], "js": [],
-        "footbar": true,
+        "footbar": true, "list": [],
     };
     return _.extend({}, basic, specific);
 };

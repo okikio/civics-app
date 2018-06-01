@@ -1,7 +1,33 @@
-mixin content(val)
-  section.layout-col-6
+mixin content(val, full)
+  section(class=`layout-col-${full ? '12' : '6'}`)
     h5.color-red-light.layout-title= val.title
-    span.layout-content-txt= val.description
+    if val.iframe
+      iframe.layout-iframe(src=val.iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+    else
+      if val.social
+        blockquote.instagram-media(class=`layout-col-${full ? '12' : '6'}` data-instgrm-permalink='https://www.instagram.com/p/Bjd2fnfgOAZ/' data-instgrm-version='8' style=' background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);')
+          div(style='padding:8px;')
+            div(style=' background:#F8F8F8; line-height:0; margin-top:40px; padding:62.5% 0; text-align:center; width:100%;')
+              div(style=' background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;')
+            p(style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;')
+              a(href='https://www.instagram.com/p/Bjd2fnfgOAZ/' style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;' target='_blank') A post shared by Renewable Energy&apos;s (@_renew_energy)
+              |  on 
+              time(style=' font-family:Arial,sans-serif; font-size:14px; line-height:17px;' datetime='2018-06-01T03:09:11+00:00') May 31, 2018 at 8:09pm PDT
+        blockquote.instagram-media(data-instgrm-permalink='https://www.instagram.com/p/Bjdxc6vgmWQ/' data-instgrm-version='8' style=' background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);')
+          div(style='padding:8px;')
+            div(style=' background:#F8F8F8; line-height:0; margin-top:40px; padding:62.5% 0; text-align:center; width:100%;')
+              div(style=' background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;')
+            p(style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;')
+              a(href='https://www.instagram.com/p/Bjdxc6vgmWQ/' style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;' target='_blank') A post shared by Renewable Energy&apos;s (@_renew_energy)
+              |  on 
+              time(style=' font-family:Arial,sans-serif; font-size:14px; line-height:17px;' datetime='2018-06-01T02:25:08+00:00') May 31, 2018 at 7:25pm PDT
+        script(async='' defer='' src='//www.instagram.com/embed.js')
+      else
+        section.layout-content-txt(class=`${val.space ? 'layout-space-norm' : ''}`)= val.description
+          if val.list
+            ul
+              each value in val.list
+                li= value
     
 mixin image(val)
   section.layout-col-6
@@ -18,12 +44,25 @@ section.layout-contain.layout-margin-vert-bottom-small
     span.layout-hero-img-txt= title
     
 each val, i in info
-  section.layout-content.layout-padding-vert(class=`${typeof val.background === 'string' ? 'layout-' + val.background : ''}`)
+  section.layout-content(
+    class=`${val.padTop || !val.nopad ? 'layout-padding-vert-top' : ''} 
+           ${val.padBottom || !val.nopad ? 'layout-padding-vert-bottom' : ''} 
+           ${typeof val.background === 'string' ? 'layout-' + val.background : ''}`)
     section.layout-contain
-      section.layout-row
-        if i % 2 == 1
-          +image(val.img)
-          +content(val)
-        else 
-          +content(val)
-          +image(val.img)
+      section.layout-row  
+        if val.split
+          each split in val.split
+            if split
+              if !split.fullImage
+                +content(split, val.split && val.split.length <= 1)
+              if split.img
+                +image(split.img)
+        else
+          if i % 2 == 1
+            if val.img
+              +image(val.img)
+            +content(val, typeof val.img == 'undefined')
+          else 
+            +content(val, typeof val.img == 'undefined')
+            if val.img
+              +image(val.img)
