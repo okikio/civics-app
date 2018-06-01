@@ -41,7 +41,7 @@ Scroll = function() {
                                             _Screen.height > _Screen.fullHeight);
 };
 
-Scroll();
 window.onload = function () {
+    Scroll();
     window.onscroll = Scroll;
 };
