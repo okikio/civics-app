@@ -42,4 +42,6 @@ Scroll = function() {
 };
 
 Scroll();
-window.onscroll = Scroll;
+window.onload = function () {
+    window.onscroll = Scroll;
+};
