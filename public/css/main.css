@@ -600,7 +600,7 @@ li.navbar-link-focus a:before {
 
 .layout-space-norm {
     line-height: 200% !important;
-    white-space: pre;
+    white-space: pre-wrap;
 }
 
 .layout-clearfix::after,
