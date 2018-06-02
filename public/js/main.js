@@ -36,6 +36,7 @@ FootTop.on("click", function() {
 Scroll = function() {
     _Screen = SetScreen();
     Avail = _Screen.height - _Screen.fullHeight;
+    Navbar.toggleClass("navbar-white", window.scrollY > 0);
     Navbar.toggleClass("style-shadow1", window.scrollY > 50);
     FootTop.toggleClass("footer-top-focus", window.scrollY >= (Avail / 2) &&
                                             _Screen.height > _Screen.fullHeight);

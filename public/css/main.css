@@ -296,12 +296,15 @@ hr {
     flex-direction: column;
     max-height: 1000px;
     position: relative;
-    background: white;
     flex-wrap: nowrap;
     flex-shrink: 0;
     color: #727276;
     z-index: 1200;
     width: 100%;
+}
+
+.navbar-white {
+    background: white;
 }
 
 .navbar-fixed {
