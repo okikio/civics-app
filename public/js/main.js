@@ -33,16 +33,18 @@ FootTop.on("click", function() {
     });
 });
 
-Scroll = function() {
+Scroll = function(e) {
     _Screen = SetScreen();
     Avail = _Screen.height - _Screen.fullHeight;
-    Navbar.toggleClass("navbar-white", window.scrollY > 0);
+    Navbar.toggleClass("navbar-white", window.scrollY > 20);
     Navbar.toggleClass("style-shadow1", window.scrollY > 50);
     FootTop.toggleClass("footer-top-focus", window.scrollY >= (Avail / 2) &&
-                                            _Screen.height > _Screen.fullHeight);
+                                                _Screen.height > _Screen.fullHeight);
+    
 };
 
-window.onload = function () {
+Scroll();
+window.addEventListener("load", function(event) {
     Scroll();
-    window.onscroll = Scroll;
-};
+    window.addEventListener("scroll", Scroll);
+});
