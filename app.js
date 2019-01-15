@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('view cache', true);
+// app.set('view cache', true);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -32,7 +32,7 @@ app.use(cookieParser());
 _.each(routeList, function(_router, route, obj) {
     app.use(route, Router(_router));
 });
-
+/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
@@ -63,6 +63,6 @@ app.use(function(err, req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render('502', page({ "title": "Bad gateway", "css": ["./css/404.css"], "footbar": false, }));
-});
+});*/
 
 module.exports = app;
