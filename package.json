@@ -3,9 +3,13 @@
     "version": "1.0.0",
     "description": "The civics web app.",
     "private": true,
+    "bin": {
+        "git-run": "./bin/git-run.js"
+    },
     "scripts": {
+        "git-run": "node ./bin/git-run.js",
         "start": "node ./bin/www",
-        "devstart": "nodemon ./bin/www"
+        "dev": "nodemon ./bin/www"
     },
     "repository": {
         "type": "git",
@@ -26,15 +30,17 @@
         "url": "https://github.com/okikio/civics-app/issues"
     },
     "dependencies": {
+        "compression": "1.7.2",
         "cookie-parser": "~1.4.3",
         "debug": "~2.6.9",
-        "express": "~4.16.0",
+        "express": "4.16.4",
         "http-errors": "~1.6.2",
-        "morgan": "~1.9.0",
+        "morgan": "1.9.1",
         "pug": "2.0.0-beta11",
-        "underscore": "^1.9.0"
+        "underscore": "1.9.1"
     },
     "devDependencies": {
-        "nodemon": "^1.17.5"
+        "nodemon": "^1.18.7",
+        "shelljs": "^0.8.3"
     }
 }

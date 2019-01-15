@@ -26,19 +26,15 @@ let Parser = function(val, key, router) {
 };
 
 // Converts the values from the routes to an Object full of routes `{ key: route }``
-let ParseRoutes = function(list) {
-    return _.reduce(list, function(obj, val, key) {
-        var router = express.Router();
-        if (!_.isUndefined(val)) {
-            obj[key] = function() {
-                Parser(val, key, router);
-                return router;
-            };
-        }
-        return obj;
-    }, {});
+var ParseRoutes = function(list, key) {
+    var router = express.Router();
+    var obj = function() {
+        Parser(list[key], key, router);
+        return router;
+    };
+    return obj;
 };
 
 module.exports = function(route) {
-    return ParseRoutes(routers) [route] ();
+    return ParseRoutes(routers, route)();
 };
