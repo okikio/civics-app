@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-// app.set('view cache', true);
+app.set('view cache', true);
 
 app.use(logger('dev'));
 app.use(express.json());
