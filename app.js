@@ -16,7 +16,7 @@ let routeList = require("./routes/route") ["routes"];
 
 // Compress/GZIP Server
 app.use(compress());
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1 day' }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
