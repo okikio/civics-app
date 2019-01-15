@@ -2,23 +2,24 @@ doctype html
 html(lang="en")
   head
     title= title
-    
-    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="Cache-Control" content="max-age=1 day")
     meta(name='theme-color' content='#11111b')
 
-    link(rel='stylesheet' href='./css/pace.min.css')
-    link(rel='stylesheet' href='./css/main.css')
+    link(rel='stylesheet' async href='./css/pace.min.css')
+    link(rel='stylesheet' async href='./css/main.css')
+    link(rel='stylesheet' async href='./assets/fonts/fonts.css')
     
-    //if IE
+    <!--[if IE]-->
       link(rel='shortcut icon' href='./assets/images/logo/Civics.ico')
+    <!--<![endif]-->
     
     link(rel='icon' href='./assets/images/logo/Civics.png' sizes='57x57' type='image/png')
     link(rel='icon' href='./assets/images/logo/Civics.svg' sizes='any' type='image/svg+xml')
     link(rel='shortcut icon' href='./assets/images/logo/Civics.png' type='image/x-icon')
     link(rel='icon' href='./assets/images/logo/Civics.png' sizes='16x16' type='image/png')
-    link(rel='stylesheet' href='../assets/fonts/fonts.css')
 
     each style in css
       link(rel='stylesheet' href=style)
