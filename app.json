@@ -1,0 +1,17 @@
+{
+  "name": "civics-app",
+  "description": "The civics web app.",
+  "scripts": {},
+  "env": {},
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }]
+}
