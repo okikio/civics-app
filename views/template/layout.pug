@@ -5,21 +5,20 @@ html(lang="en")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-    meta(http-equiv="Cache-Control" content="max-age=1 day")
+    meta(http-equiv="Cache-Control" content="max-age=2592000")
     meta(name='theme-color' content='#11111b')
 
-    link(rel='stylesheet' async href='./css/pace.min.css')
-    link(rel='stylesheet' async href='./css/main.css')
-    link(rel='stylesheet' async href='./assets/fonts/fonts.css')
+    link(rel='stylesheet' href='./css/main.css')
+    link(rel='stylesheet' href='./fonts/fonts.min.css')
     
     <!--[if IE]-->
-      <!-- link(rel='shortcut icon' href='./assets/images/logo/Civics.ico') -->
+      <!-- link(rel='shortcut icon' href='./images/logo/Civics.ico') -->
     <!--<![endif]-->
     
-    link(rel='icon' href='./assets/images/logo/Civics.png' sizes='57x57' type='image/png')
-    link(rel='icon' href='./assets/images/logo/Civics.svg' sizes='any' type='image/svg+xml')
-    link(rel='shortcut icon' href='./assets/images/logo/Civics.png' type='image/x-icon')
-    link(rel='icon' href='./assets/images/logo/Civics.png' sizes='16x16' type='image/png')
+    link(rel='icon' href='./images/logo/Civics.png' sizes='57x57' type='image/png')
+    link(rel='icon' href='./images/logo/Civics.svg' sizes='any' type='image/svg+xml')
+    link(rel='shortcut icon' href='./images/logo/Civics.png' type='image/x-icon')
+    link(rel='icon' href='./images/logo/Civics.png' sizes='16x16' type='image/png')
 
     each style in css
       link(rel='stylesheet' href=style)
@@ -29,7 +28,6 @@ html(lang="en")
       block content
     include ../components/footer.pug
       
-  script(src='./js/pace.min.js')
   script(src='./js/rye.min.js')
   script(src='./js/main.js')
   each scripts in js

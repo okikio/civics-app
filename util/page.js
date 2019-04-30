@@ -1,14 +1,1 @@
-var _ = require("underscore");
-// Shared similarites between pages
-module.exports = function(specific) {
-    var basic = {
-        "title": "Page",
-        "hero": {
-            "src": "/assets/images/city.jpeg",
-            "alt": "An iamge of a bustling city."
-        },
-        "info": [], "css": [], "js": [],
-        "footbar": true, "list": [],
-    };
-    return _.extend({}, basic, specific);
-};
+module.exports=function(specific){var basic={"title":"Page","hero":{"src":"/images/city.jpeg","alt":"An iamge of a bustling city."},"info":[],"css":[],"js":[],"footbar":!0,"list":[],};return Object.assign({},basic,specific)}
