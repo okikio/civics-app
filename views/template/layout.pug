@@ -31,6 +31,6 @@ html(lang="en")
   script(src='./js/rye.min.js')
   script(src='./js/main.js')
   script.
-    var navigator=window.navigator;"serviceWorker"in navigator?navigator.serviceWorker.getRegistrations().then(function(e){0==e.length&&navigator.serviceWorker.register("./sw.min.js").then(function(e){console.log("[Service Worker] registration successful with scope: ",e.scope),e.installing?console.log("[Service Worker] installing"):e.waiting?console.log("[Service Worker] installed"):e.active&&console.log("[Service Worker] active")}).catch(function(e){console.error("[Service Worker] registration failed: ",e)})}):console.log("No Service Worker's or App Cache Support");
+    var navigator=window.navigator;"serviceWorker"in navigator?navigator.serviceWorker.getRegistrations().then(function(e){0==e.length&&navigator.serviceWorker.register("/sw.min.js").then(function(e){console.log("[Service Worker] registration successful with scope: ",e.scope),e.installing?console.log("[Service Worker] installing"):e.waiting?console.log("[Service Worker] installed"):e.active&&console.log("[Service Worker] active")}).catch(function(e){console.error("[Service Worker] registration failed: ",e)})}):console.log("No Service Worker's or App Cache Support");
   each scripts in js
     script(src=scripts)
